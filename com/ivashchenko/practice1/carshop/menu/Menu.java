@@ -1,6 +1,5 @@
-package com.ivashchenko.practice1.menu;
+package com.ivashchenko.practice1.carshop.menu;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 /**

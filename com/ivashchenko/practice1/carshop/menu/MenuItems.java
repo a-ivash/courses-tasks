@@ -1,4 +1,4 @@
-package com.ivashchenko.practice1.menu;
+package com.ivashchenko.practice1.carshop.menu;
 
 /**
  * This enum represents elements of menu.

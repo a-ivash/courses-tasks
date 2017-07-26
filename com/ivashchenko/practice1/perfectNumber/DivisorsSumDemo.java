@@ -1,4 +1,4 @@
-package com.ivashchenko.home1.perfectNumber;
+package com.ivashchenko.practice1.perfectNumber;
 
 /**
  * This class is used to demonstrate work with DivisorsSum class.

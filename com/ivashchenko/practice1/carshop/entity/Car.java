@@ -1,6 +1,6 @@
-package com.ivashchenko.practice1.entity;
+package com.ivashchenko.practice1.carshop.entity;
 
-import com.ivashchenko.practice1.entity.enums.Color;
+import com.ivashchenko.practice1.carshop.entity.enums.Color;
 
 import java.time.LocalDate;
 

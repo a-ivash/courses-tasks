@@ -1,4 +1,4 @@
-package com.ivashchenko.home1.converter;
+package com.ivashchenko.practice1.converter;
 
 /**
  * This class is used to convert decimal representation of number to binary/octal/hexadecimal representation.

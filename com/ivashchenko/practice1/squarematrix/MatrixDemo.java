@@ -1,4 +1,4 @@
-package com.ivashchenko.home1.squarematrix;
+package com.ivashchenko.practice1.squarematrix;
 
 /**
  * This class is used to demonstrate work with Matrix class.

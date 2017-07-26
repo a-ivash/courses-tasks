@@ -1,6 +1,6 @@
-package com.ivashchenko.practice1.entity.comparators;
+package com.ivashchenko.practice1.carshop.entity.comparators;
 
-import com.ivashchenko.practice1.entity.Car;
+import com.ivashchenko.practice1.carshop.entity.Car;
 
 import java.util.Comparator;
 /**

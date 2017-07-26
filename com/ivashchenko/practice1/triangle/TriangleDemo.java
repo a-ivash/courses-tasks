@@ -1,4 +1,4 @@
-package com.ivashchenko.home1.triangle;
+package com.ivashchenko.practice1.triangle;
 
 /**
  * This class is used to demonstrate work with Triangle class.
