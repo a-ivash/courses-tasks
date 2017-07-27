@@ -16,15 +16,14 @@ public class StringHandler {
     public void handle() {
         String inputText = readLongInput();
         String wordEnding = askForInput("Enter word ending: ");
-        String replaceWith = askForInput("Enter string to append it with: ");
+        String appendString = askForInput("Enter string to append it with: ");
         System.out.println("Your text with changes: ");
-        String manualReplacement = manualInsertAfterWordEndWith(inputText, wordEnding, replaceWith);
-        String automaticReplacement = automaticInsertAfterWordEndWith(inputText, wordEnding, replaceWith);
-        System.out.println(manualReplacement);
-
+        String manualInserting = manualInsertAfterWordEndWith(inputText, wordEnding, appendString);
+        String automaticInserting = automaticInsertAfterWordEndWith(inputText, wordEnding, appendString);
+        System.out.println(manualInserting);
 
         System.out.print("Texts are ");
-        System.out.println((manualReplacement.equals(automaticReplacement) ? "" : "not ") + "equal");
+        System.out.println((manualInserting.equals(automaticInserting) ? "" : "not ") + "equal");
     }
 
     private String readLongInput() {
@@ -42,21 +41,21 @@ public class StringHandler {
         return scanner.nextLine();
     }
 
-    private String automaticInsertAfterWordEndWith(String text, String wordEnd, String replaceWith) {
-        StringBuilder sbAutomatic = new StringBuilder(text.replaceAll(wordEnd + "\\b", wordEnd + replaceWith));
+    private String automaticInsertAfterWordEndWith(String text, String wordEnd, String appendString) {
+        StringBuilder sbAutomatic = new StringBuilder(text.replaceAll(wordEnd + "\\b", wordEnd + appendString));
         return sbAutomatic.toString();
     }
 
-    private String manualInsertAfterWordEndWith(String text, String wordEnd, String replaceWith) {
+    private String manualInsertAfterWordEndWith(String text, String wordEnd, String appendString) {
         StringBuilder sbManual = new StringBuilder(text);
         Pattern patternEnding = Pattern.compile(wordEnd + "\\b", Pattern.CASE_INSENSITIVE);
         Matcher matcherEnding = patternEnding.matcher(text);
         int shift = 0;
 
         while (matcherEnding.find()) {
-            sbManual.insert(shift + matcherEnding.end(), replaceWith);
+            sbManual.insert(shift + matcherEnding.end(), appendString);
             // After inserting into StringBuilder instance all indices are shifted by replaceWith.length()
-            shift += replaceWith.length();
+            shift += appendString.length();
         }
 
         return sbManual.toString();
