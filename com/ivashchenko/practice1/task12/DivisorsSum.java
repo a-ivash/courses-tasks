@@ -1,4 +1,4 @@
-package com.ivashchenko.practice1.perfectNumber;
+package com.ivashchenko.practice1.task12;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.ivashchenko.practice1.carshop.entity.enums;
+package com.ivashchenko.practice1.task31.entity.enums;
 
 /**
  * This enum is used to represent the color of car.

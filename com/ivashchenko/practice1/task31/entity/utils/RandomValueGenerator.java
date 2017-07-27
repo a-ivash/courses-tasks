@@ -1,7 +1,7 @@
-package com.ivashchenko.practice1.carshop.entity.utils;
+package com.ivashchenko.practice1.task31.entity.utils;
 
-import com.ivashchenko.practice1.carshop.entity.Car;
-import com.ivashchenko.practice1.carshop.entity.enums.Color;
+import com.ivashchenko.practice1.task31.entity.Car;
+import com.ivashchenko.practice1.task31.entity.enums.Color;
 
 import java.util.Random;
 

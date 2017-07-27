@@ -1,8 +1,8 @@
-package com.ivashchenko.practice1.carshop.entity;
+package com.ivashchenko.practice1.task31.entity;
 
-import com.ivashchenko.practice1.carshop.entity.utils.RandomValueGenerator;
-import com.ivashchenko.practice1.carshop.menu.Menu;
-import com.ivashchenko.practice1.carshop.menu.ShopMenu;
+import com.ivashchenko.practice1.task31.entity.utils.RandomValueGenerator;
+import com.ivashchenko.practice1.task31.menu.Menu;
+import com.ivashchenko.practice1.task31.menu.ShopMenu;
 
 import java.util.*;
 

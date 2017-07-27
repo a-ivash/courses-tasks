@@ -1,8 +1,8 @@
-package com.ivashchenko.practice1.carshop.menu;
+package com.ivashchenko.practice1.task31.menu;
 
-import com.ivashchenko.practice1.carshop.entity.Car;
-import com.ivashchenko.practice1.carshop.entity.Shop;
-import com.ivashchenko.practice1.carshop.entity.comparators.CarByNameComparator;
+import com.ivashchenko.practice1.task31.entity.Car;
+import com.ivashchenko.practice1.task31.entity.Shop;
+import com.ivashchenko.practice1.task31.entity.comparators.CarByNameComparator;
 
 import java.util.Collections;
 import java.util.List;

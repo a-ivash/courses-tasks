@@ -1,6 +1,6 @@
-package com.ivashchenko.practice1.carshop;
+package com.ivashchenko.practice1.task31;
 
-import com.ivashchenko.practice1.carshop.entity.Shop;
+import com.ivashchenko.practice1.task31.entity.Shop;
 
 public class CarDemo {
     public static void main(String[] args) {

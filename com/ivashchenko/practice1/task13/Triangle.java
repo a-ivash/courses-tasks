@@ -1,4 +1,4 @@
-package com.ivashchenko.practice1.triangle;
+package com.ivashchenko.practice1.task13;
 /**
  * This class is used to represent triangle with max level = 9.
  * This class supports building triangle of specified level and printing it to console.
