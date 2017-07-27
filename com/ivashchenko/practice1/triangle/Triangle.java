@@ -1,7 +1,7 @@
 package com.ivashchenko.practice1.triangle;
 /**
- * This class is used to represent Pascal's triangle with max level = 9.
- * This class supports building Pascal's triangle of specified level and printing it to console.
+ * This class is used to represent triangle with max level = 9.
+ * This class supports building triangle of specified level and printing it to console.
  * @version 0.01
  * @author Alex Ivashchenko
  */
