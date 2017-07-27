@@ -16,10 +16,10 @@ public class StringHandler {
     public void handle() {
         String inputText = readLongInput();
         String wordEnding = askForInput("Enter word ending: ");
-        String replaceWith = askForInput("Enter string to replace it with: ");
-        System.out.println("Your text with replacements: ");
-        String manualReplacement = manualReplaceWordEndWith(inputText, wordEnding, replaceWith);
-        String automaticReplacement = automaticReplaceWordEndWith(inputText, wordEnding, replaceWith);
+        String replaceWith = askForInput("Enter string to append it with: ");
+        System.out.println("Your text with changes: ");
+        String manualReplacement = manualInsertAfterWordEndWith(inputText, wordEnding, replaceWith);
+        String automaticReplacement = automaticInsertAfterWordEndWith(inputText, wordEnding, replaceWith);
         System.out.println(manualReplacement);
 
 
@@ -42,23 +42,21 @@ public class StringHandler {
         return scanner.nextLine();
     }
 
-    private String automaticReplaceWordEndWith(String text, String wordEnd, String replaceWith) {
-        StringBuilder sbAutomatic = new StringBuilder(text.replaceAll(wordEnd + "\\b", replaceWith));
+    private String automaticInsertAfterWordEndWith(String text, String wordEnd, String replaceWith) {
+        StringBuilder sbAutomatic = new StringBuilder(text.replaceAll(wordEnd + "\\b", wordEnd + replaceWith));
         return sbAutomatic.toString();
     }
 
-    private String manualReplaceWordEndWith(String text, String wordEnd, String replaceWith) {
+    private String manualInsertAfterWordEndWith(String text, String wordEnd, String replaceWith) {
         StringBuilder sbManual = new StringBuilder(text);
         Pattern patternEnding = Pattern.compile(wordEnd + "\\b", Pattern.CASE_INSENSITIVE);
         Matcher matcherEnding = patternEnding.matcher(text);
         int shift = 0;
 
         while (matcherEnding.find()) {
-            sbManual.replace(shift + matcherEnding.start(), shift + matcherEnding.end(), replaceWith);
-            int oldLength = matcherEnding.end() - matcherEnding.start();
-            // After replacing into StringBuilder instance all indices are shifted by
-            // replaceWith.length() - oldLength positions.
-            shift += replaceWith.length() - oldLength;
+            sbManual.insert(shift + matcherEnding.end(), replaceWith);
+            // After inserting into StringBuilder instance all indices are shifted by replaceWith.length()
+            shift += replaceWith.length();
         }
 
         return sbManual.toString();
