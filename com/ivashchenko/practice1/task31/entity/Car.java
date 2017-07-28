@@ -3,6 +3,7 @@ package com.ivashchenko.practice1.task31.entity;
 import com.ivashchenko.practice1.task31.entity.enums.Color;
 
 import java.time.LocalDate;
+import java.util.Collections;
 
 /**
  * This class is used to represent information about car.

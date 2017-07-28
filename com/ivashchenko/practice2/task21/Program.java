@@ -1,4 +1,4 @@
-package com.ivashchenko.practice2;
+package com.ivashchenko.practice2.task21;
 
 /**
  * This class is used to demonstrate work with StringHandler class.

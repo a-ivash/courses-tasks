@@ -5,6 +5,7 @@ import com.ivashchenko.practice1.task31.entity.Shop;
 import com.ivashchenko.practice1.task31.entity.comparators.CarByNameComparator;
 
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -20,6 +21,8 @@ public class ShopMenu extends Menu {
                 "Get cars of model older than N years. ",
                 "Get cars of specified production year with price > N. ",
                 "Print cars sorted by name. ",
+                "Print cars sorted by price.",
+                "Print cars sorted by production year",
                 "EXIT"
         };
     }
@@ -62,6 +65,28 @@ public class ShopMenu extends Menu {
         printCars(allCars);
     }
 
+    private void queryCarsSortedByPrice() {
+        List<Car> allCars = shop.getAllCars();
+        Collections.sort(allCars, new Comparator<Car>() {
+            @Override
+            public int compare(Car o1, Car o2) {
+                return o1.getPrice() - o2.getPrice();
+            }
+        });
+        printCars(allCars);
+    }
+
+    private void queryCarsSortedByProductionYear() {
+        List<Car> allCars = shop.getAllCars();
+        Collections.sort(allCars, new Comparator<Car>() {
+            @Override
+            public int compare(Car o1, Car o2) {
+                return o1.getProductionYear() - o2.getProductionYear();
+            }
+        });
+        printCars(allCars);
+    }
+
     @Override
     public void handleMenu() {
         MenuItems menuItem = MenuItems.EXIT;
@@ -82,6 +107,12 @@ public class ShopMenu extends Menu {
                     break;
                 case SORT_BY_MANUFACTURER:
                     queryCarsSortedByName();
+                    break;
+                case SORT_BY_PRICE:
+                    queryCarsSortedByPrice();
+                    break;
+                case SORT_BY_PRODUCTION_YEAR:
+                    queryCarsSortedByProductionYear();
                     break;
                 case EXIT:
                     return;

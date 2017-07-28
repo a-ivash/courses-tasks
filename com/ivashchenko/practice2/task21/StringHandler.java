@@ -1,4 +1,4 @@
-package com.ivashchenko.practice2;
+package com.ivashchenko.practice2.task21;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
