@@ -11,8 +11,9 @@
 символов «0÷9» ИЛИ «A÷F»
 ********************************************
 
-very long #ABC@DEF# #123@3456#
-#@EF# #09000@EEE #A@0E# #Z@Z# text
+Sample input:
+very long #ABC@#DEF #123@#3456
+#@EF# #09000@#EEE #A@0E# #Z@Z# text
 
-
-\B#(\d*|[A-F]*)@(\d*|[A-F]*)#\B
+Required regular expression:
+\B#(\d*|[A-F]*)@#(\d*|[A-F]*)\B

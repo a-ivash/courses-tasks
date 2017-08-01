@@ -43,7 +43,16 @@ public class CellPhone {
         return stringBuilder.toString();
     }
 
-    public class Component {
+    public boolean hasComponent(String componentName) {
+        for (Component component: components) {
+            if (component.getComponentName().toLowerCase().equals(componentName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private class Component {
         private String componentName;
         private String componentDescription;
         private String[] specifications;
