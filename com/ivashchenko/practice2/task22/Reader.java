@@ -1,5 +1,7 @@
 package com.ivashchenko.practice2.task22;
 
+import java.io.BufferedInputStream;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -29,5 +31,10 @@ public class Reader {
     public static int askForInt(String question) {
         System.out.println(question);
         return scanner.nextInt();
+    }
+
+    public static char askForChar(String question) {
+        System.out.println(question);
+        return scanner.next(".").charAt(0);
     }
 }
