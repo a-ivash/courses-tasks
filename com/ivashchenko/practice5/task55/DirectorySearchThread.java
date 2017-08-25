@@ -5,47 +5,50 @@ import java.util.concurrent.ExecutorService;
 
 /** Class that recursively proceed every sub directory.*/
 public class DirectorySearchThread implements Runnable {
-    private File fileToSearch;
+    private File currentDirectory;
     private ExecutorService pool;
-    private String pathToWrite;
-    private boolean isRootProcess;
+    private File outputDirectory;
 
-    public DirectorySearchThread(File fileToSearch, String pathToWrite, ExecutorService pool, boolean isRoot) {
-        this.fileToSearch = fileToSearch;
-        this.pathToWrite = pathToWrite;
+    public DirectorySearchThread(File currentDirectory, File outputDirectory, ExecutorService pool) {
+        this.currentDirectory = currentDirectory;
+        this.outputDirectory = outputDirectory;
         this.pool = pool;
-        this.isRootProcess = isRoot;
+
+        createOutputDirectory();
+    }
+
+    /** Creates new directory to write modified files to. */
+    private void createOutputDirectory() {
+        if(!outputDirectory.exists())
+            outputDirectory.mkdir();
+    }
+
+    private void deleteDirectoryIfEmpty() {
+        if(outputDirectory!= null && outputDirectory.listFiles().length == 0) {
+            outputDirectory.delete();
+        }
     }
 
     @Override
     public void run() {
-        // Create new directory to write modified files.
-        File dir = new File(pathToWrite);
-        if(!dir.exists())
-            dir.mkdir();
+        for (File currentFile: currentDirectory.listFiles()) {
+            if (currentFile.isDirectory()) {
+                File newOutputDirectory = new File(outputDirectory, currentFile.getName());
 
-        for (File file: fileToSearch.listFiles()) {
-            if (file.isDirectory()) {
-                String newPath = pathToWrite + file.getName() + "\\";
                 // Recursively proceed sub directory
-                pool.submit(new DirectorySearchThread(file, newPath, pool, false));
+                pool.submit(new DirectorySearchThread(currentFile, newOutputDirectory, pool));
                 continue;
             }
 
-            System.out.println("Looking at file: " + file.getAbsolutePath());
-            if (file.getName().endsWith(".java")) {
-                File output = new File(pathToWrite + file.getName());
-                CommentCleaner.clean(file, output);
+            System.out.println("Looking at file: " + currentFile.getAbsolutePath());
+            if (currentFile.getName().endsWith(".java")) {
+                File output = new File(outputDirectory, currentFile.getName());
+                CommentCleaner.clean(currentFile, output);
             }
         }
-        System.out.println("DONE dir: " + fileToSearch.getAbsolutePath());
-        if(isRootProcess) {
-//            try {
-//                Thread.sleep(1000);
-//            } catch (InterruptedException e) {
-//
-//            }
-//            pool.shutdown();
-        }
+        System.out.println("DONE dir: " + currentDirectory.getAbsolutePath());
+
+        // removing output directory if no files were written
+        deleteDirectoryIfEmpty();
     }
 }

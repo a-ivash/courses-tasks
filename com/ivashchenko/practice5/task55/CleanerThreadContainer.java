@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class CleanerThreadContainer {
     private ExecutorService pool;
     private File startDirectory;
-    private String directoryToWrite;
+    private File outputDirectory;
     private static final int NUMBER_OF_THREADS = 4;
 
     public CleanerThreadContainer(){
@@ -19,7 +19,7 @@ public class CleanerThreadContainer {
 
     public void runSearch() {
         handleInput();
-        DirectorySearchThread dst = new DirectorySearchThread(startDirectory, directoryToWrite, pool, true);
+        DirectorySearchThread dst = new DirectorySearchThread(startDirectory, outputDirectory, pool);
         pool.submit(dst);
         try{
             pool.awaitTermination(1, TimeUnit.SECONDS);
@@ -33,8 +33,7 @@ public class CleanerThreadContainer {
 
     /** Simply asking for a valid starting directory location and the destination path. */
     public void handleInput() {
-        startDirectory = PathHandler.askForFile("Enter path of start directory: ");
-        directoryToWrite = PathHandler.askForDirectory("Enter directory to write file to: ");
-        directoryToWrite += startDirectory.getName() + "/";
+        startDirectory = PathHandler.askForDirectory("Enter path of start directory: ");
+        outputDirectory = PathHandler.askForDirectory("Enter directory to write file to: ");
     }
 }
