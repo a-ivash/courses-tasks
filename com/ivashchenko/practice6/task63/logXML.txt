@@ -1,0 +1,63 @@
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent -1 in binary codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent -1 in octal codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent -1 in hex codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent 0 in binary codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Successfully decode 0 into 
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent 0 in octal codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Successfully decode 0 into 
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent 0 in hex codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Successfully decode 0 into 
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent 1 in binary codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Successfully decode 1 into 1
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent 1 in octal codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Successfully decode 1 into 1
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent 1 in hex codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Successfully decode 1 into 1
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent 2 in binary codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Successfully decode 2 into 10
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent 2 in octal codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Successfully decode 2 into 2
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent 2 in hex codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Successfully decode 2 into 2
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent 3 in binary codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Successfully decode 3 into 11
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent 3 in octal codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Successfully decode 3 into 3
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent 3 in hex codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Successfully decode 3 into 3
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent 4 in binary codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Successfully decode 4 into 100
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent 4 in octal codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Successfully decode 4 into 4
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent 4 in hex codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Successfully decode 4 into 4
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent 5 in binary codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Successfully decode 5 into 101
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Trying to represent 5 in octal codes
+2017-09-14 12:42:36,886 [main] [ INFO][NumberConverter] - Successfully decode 5 into 5
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Trying to represent 5 in hex codes
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Successfully decode 5 into 5
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Trying to represent 6 in binary codes
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Successfully decode 6 into 110
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Trying to represent 6 in octal codes
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Successfully decode 6 into 6
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Trying to represent 6 in hex codes
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Successfully decode 6 into 6
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Trying to represent 7 in binary codes
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Successfully decode 7 into 111
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Trying to represent 7 in octal codes
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Successfully decode 7 into 7
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Trying to represent 7 in hex codes
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Successfully decode 7 into 7
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Trying to represent 8 in binary codes
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Successfully decode 8 into 1000
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Trying to represent 8 in octal codes
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Successfully decode 8 into 10
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Trying to represent 8 in hex codes
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Successfully decode 8 into 8
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Trying to represent 9 in binary codes
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Successfully decode 9 into 1001
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Trying to represent 9 in octal codes
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Successfully decode 9 into 11
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Trying to represent 9 in hex codes
+2017-09-14 12:42:36,901 [main] [ INFO][NumberConverter] - Successfully decode 9 into 9
